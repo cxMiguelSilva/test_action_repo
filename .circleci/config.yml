@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Run KICS
           command: |
-            /app/bin/kics scan -p ${PWD} -o ${PWD} --ci -v
+            /app/bin/kics scan -p ${PWD} -o ${PWD} -v
       - store_artifacts:
           path: ${PWD}/results.json
 
