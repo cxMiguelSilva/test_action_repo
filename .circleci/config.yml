@@ -10,7 +10,7 @@ jobs:
           command: |
             /app/bin/kics scan -p ${PWD} -o ${PWD} -v
       - store_artifacts:
-          path: ${PWD}/results.json
+          path: /results.json
 
 workflows:
   version: 2
