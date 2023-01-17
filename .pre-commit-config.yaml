@@ -1,7 +1,8 @@
 repos:
-    - repo: https://github.com/Checkmarx/kics
-      rev: "v1.6.7"
+    - repo: local
       hooks:
-          - id: kics-scan
+          - id: kics-scan-local
+            name: Kics scan
+            language: docker_image
+            entry: checkmarx/kics scan -p /src --no-progress --cloud-provider gcp --disable-secrets
             verbose: true
-            args: [--ignore-on-exit, "all", --cloud-provider, "gcp", "--fail-on", "high"]
