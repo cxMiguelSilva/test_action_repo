@@ -4,4 +4,4 @@ repos:
       hooks:
           - id: kics-scan
             verbose: true
-            args: [--ignore-on-exit, "all"]
+            args: [--ignore-on-exit, "all", --cloud-provider, "gcp"]
