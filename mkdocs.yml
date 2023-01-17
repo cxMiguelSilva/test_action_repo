@@ -1,6 +1,6 @@
 ---
 # only needed for readthedocs.io
-site_name: 'Free Templates for AWS CloudFormation'
+site_name: 'Free Templates for AWS CloudFormation '
 docs_dir: docs
 theme: mkdocs
 pages:

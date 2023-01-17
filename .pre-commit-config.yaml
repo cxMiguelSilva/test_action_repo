@@ -1,0 +1,7 @@
+repos:
+    - repo: https://github.com/Checkmarx/kics
+      rev: "v1.6.7"
+      hooks:
+          - id: kics-scan
+            verbose: true
+            args: [--ignore-on-exit, "all"]
