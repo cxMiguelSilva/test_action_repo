@@ -1082,7 +1082,6 @@ Resources:
                     autoscaling.complete_lifecycle_action(
                       lifecycle_hook_name: hook,
                       auto_scaling_group_name: asg,
-                      lifecycle_action_token: token,
                       lifecycle_action_result: 'CONTINUE'
                     )
                     $log.info "Lifecycle action completed"

@@ -1,5 +1,7 @@
 np-progress: true
-path: /src/vpc
-disable-secrets: true
+disable-secrets: false
 cloud-provider:
 - gcp
+path: /src/jenkins
+exclude-paths: /src/ecs
+ci: true
