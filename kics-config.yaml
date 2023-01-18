@@ -1,0 +1,5 @@
+np-progress: true
+path: /src/vpc
+disable-secrets: true
+cloud-provider:
+- gcp
