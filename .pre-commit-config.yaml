@@ -1,6 +1,23 @@
 repos:
-  - repo: https://github.com/Checkmarx/kics
-    rev: "v1.6.7" # change to correct tag or sha
-    hooks:
-        - id: kics-scan
-          args: [ --config, "/src/kics-config.yaml"]
+- repo: local
+  hooks:
+    - name: test
+      id: kics-scan
+      language: system
+      entry: "kics scan"
+      args: [
+      #--exclude-paths, "/home/miguel/cx/kics/share/kics/assets/queries",
+             --queries-path, "/home/miguel/cx/kics/assets/queries",
+             --exclude-gitignore, "true",
+             --path, "./jenkins",
+#             --output-path, "kics-results",
+             --disable-full-descriptions, "true",
+            # --type, "Terraform",
+             --fail-on, "high,medium,low",
+             --cloud-provider, "gcp",
+#             --log-path, "./info.log",
+#             --log-level, "TRACE",
+#             --ignore-on-exit, "all",
+             --no-progress, "true",
+#             --ci, "true",
+             --]

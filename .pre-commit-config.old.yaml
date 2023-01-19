@@ -1,0 +1,6 @@
+repos:
+  - repo: https://github.com/Checkmarx/kics
+    rev: "v1.6.7" # change to correct tag or sha
+    hooks:
+        - id: kics-scan
+          args: [ --config, "/src/kics-config.yaml"]
